@@ -1,10 +1,11 @@
 #Importarea modulului necesar operatiilor matematice avansate
 import math
+import datetime
 
 #Bucla while pentru a executa programul fara intrerupere si a permite utilizatorului sa se intoarca in meniu si sa aleaga o alta optiune
 while True:
     #Utilizatorul alege operatia matematica pe care o doreste din meniu (folosim \n pentru introducerea unui nou rand)
-    print("\nSelecteaza operatia matematica dorita.\n\n0 - Adunare\n1 - Scadere\n2 - Inmultire\n3 - Impartire\n4 - Modulo\n5 - Ridicare la putere\n6 - Radical\n7 - Sinus\n8 - Cosinus\n9 - Tangenta\n10 - Logaritm in baza 2")
+    print("\nSelecteaza operatia matematica dorita.\n\n0 - Adunare\n1 - Scadere\n2 - Inmultire\n3 - Impartire\n4 - Modulo\n5 - Ridicare la putere\n6 - Radical\n7 - Sinus\n8 - Cosinus\n9 - Tangenta\n10 - Logaritm in baza 2\n11 - Metri cubi\n12 - Metri patrati\n13 - Introduce Aria si afla perimetru si laturile unui patrat perfect")
 
     oper = input("\nOptiunea ta: ") #Variabila care stocheaza valoarea aleasa de utilizator
 
@@ -168,14 +169,63 @@ while True:
         else:
             break
 
+    # Metri cubi
+    elif oper == "11":
+        h = float(input("\nIntroduceti inaltimea (metri) : "))
+        l = float(input("\nIntroduceti lungime (metri) :  "))
+        l2 = float(input("\nIntroduceti latime (metri) : "))
+
+        print(f"\nRezultatul este: {l*l2*h}\n")
+
+        #Intoarcere la meniul principal sau iesirea din program
+        inapoi = input('\nMergi inapoi in meniul principal? (y/n) ')
+
+        if inapoi == 'y':
+            continue
+        else:
+            break
+    
+    # Metri patrati Aria to perimetru si laturile unui patrat
+    elif oper == "12":
+        l = float(input("\nIntroduceti lungime (metri) :  "))
+        l2 = float(input("\nIntroduceti latime (metri) : "))
+
+        print(f"\nRezultatul este: {l*l213}\n")
+
+        #Intoarcere la meniul principal sau iesirea din program
+        inapoi = input('\nMergi inapoi in meniul principal? (y/n) ')
+
+        if inapoi == 'y':
+            continue
+        else:
+            break
+        
+    # Aria to perimetru si laturile unui patrat
+    elif oper == "13":
+        aria = float(input("\nIntroduceti aria (metri) :  "))
+        print("Aria Patratului:",aria,"m^2\n")
+        print(f"\nPerimetrul este: {(aria ** 0.5)*4} m")
+        print(f"\nlatura patratului este: {aria ** 0.5} m")
+        # print(f"\nlatura patratului este: {math.sqrt(aria)} m") # varianta 2
+
+        #Intoarcere la meniul principal sau iesirea din program
+        inapoi = input('\nMergi inapoi in meniul principal? (y/n) ')
+
+        if inapoi == 'y':
+            continue
+        else:
+            break
 
 	#Tratarea optiunilor invalide
     else:
-        print("\nOptiune invalida!\n")
+        print(f"\n{datetime.datetime.now()} >>> Optiune invalida!\n")
 
         #utilizatorul a introdus obtiunea invalida "numar" la data si ora : "data", "ora"
         #salvare data si ora intrun fisier extern invalid input.txt
-        save-file =
+        
+        # with open("input.txt", "w") as file:
+        #     file.write(f" utilizatorul a introdus obtiunea invalida {oper} la data si ora : {datetime.datetime.now()}")
+             
 
 		#Intoarcere la meniul principal sau iesirea din program
         inapoi = input('\nDoresti sa continui? (y/n) ')
