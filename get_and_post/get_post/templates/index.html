@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <a href="/">
+        <button type="submit">index</button><br>
+    </a>
+    <br>
+    <form action="../get-method/" method='get'>
+        {% comment %} {% csrf_token %} {% endcomment %}
+        <input type="text" name='nume-get'>
+        <button type="submit">get</button>
+    </form>
+    <br>
+    <form action="../post-method/" method='post'>
+        {% csrf_token %}
+        <input type="text" name='nume-post'>
+        <input type="text" name='prenume-post'>
+        <input type="text" name='varsta-post'>
+        <input type="text" name='inaltime-post'>
+        <button type="submit">post</button>
+    </form>
+    
+    <h2>Test</h2>
+    <h4>{{response_from}}</h4>
+</body>
+</html>
