@@ -129,3 +129,26 @@ def DNA_strand(dna):
     
     
 print(DNA_strand("ATTGC"))
+
+import os
+
+print(os.getcwd())
+
+from collections import OrderedDict
+from faker import Faker
+Faker.seed(0)
+locales = OrderedDict([
+    ('en-US', 1),
+    ('en-PH', 2),
+    ('ja_JP', 3),
+    ('ro_RO', 6),
+])
+fake = Faker(locales)
+
+# b = [fake['ro_RO'].profile()['birthdate'] for _ in range(10)]
+# for x in b:
+#     print(str(x.strftime("%d-%m-%Y")))
+    
+# a = [fake['ro_RO'].date_between("-30y", "-15y") for _ in range(10)]
+# for x in a:
+#     print(str(x.strftime("%d-%m-%Y")))
