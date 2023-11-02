@@ -152,3 +152,20 @@ fake = Faker(locales)
 # a = [fake['ro_RO'].date_between("-30y", "-15y") for _ in range(10)]
 # for x in a:
 #     print(str(x.strftime("%d-%m-%Y")))
+
+
+x = -1
+for i in range(1,3):
+    print()
+    for j in range(1,2):
+        print(x)
+        if i == j:
+            x += 1
+    else:
+        x+=1
+        print(x)
+        
+print()
+d= {"pasd":1}
+for x in d:
+    print(str(x)[0])
